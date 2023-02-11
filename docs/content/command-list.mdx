@@ -1,0 +1,35 @@
+---
+title: 🎨 CommandList
+description: Option list.
+---
+
+### 1. Import:
+
+```jsx
+import { CommandList } from "superkey";
+```
+
+### 2. Use:
+
+```jsx
+<CommandList>{/* Here your CommandOption */}</CommandList>
+```
+
+### ⚙️ Props:
+
+| Prop      | Description                              | Required |
+| --------- | ---------------------------------------- | -------- |
+| children  | Inside it uses CommandOption components. | ✅       |
+| className | Edit the default styles.                 | -        |
+
+### ⚙️ Interface:
+
+```ts
+export interface SharedCommandProps {
+  className?: string;
+}
+
+export interface CommandListProps extends SharedCommandProps {
+  children: React.ReactNode;
+}
+```

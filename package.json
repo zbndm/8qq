@@ -1,0 +1,25 @@
+{
+  "private": true,
+
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "preview-pkg": "turbo run build --filter=8q",
+    "release": "turbo run build --filter=8q && changeset publish",
+    "clean": "npx rimraf ./**/dist"
+  },
+  "dependencies": {
+    "@changesets/cli": "2.25.1"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "pnpm@8.30.0"
+}

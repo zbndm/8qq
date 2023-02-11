@@ -1,0 +1,41 @@
+---
+title: 🎨 CommandOption
+description: Option component.
+---
+
+### 1. Import:
+
+```jsx
+import { CommandOption } from "superkey";
+```
+
+### 2. Use:
+
+```jsx
+<CommandOption value="Hello">
+  <h1>Hello</h1>
+</CommandOption>
+```
+
+### ⚙️ Props:
+
+| Prop            | Description                           | Required |
+| --------------- | ------------------------------------- | -------- |
+| value           | The value of the option.              | ✅       |
+| children        | Option content.                       | ✅       |
+| className       | Edit the styles of the option.        | -        |
+| activeClassName | Edit the active styles of the option. | -        |
+
+### ⚙️ Interface:
+
+```ts
+export interface SharedCommandProps {
+  className?: string;
+}
+
+export interface CommandOptionProps extends SharedCommandProps {
+  value: string | (() => void);
+  activeClassName?: string;
+  children: React.ReactNode;
+}
+```

@@ -1,0 +1,69 @@
+---
+title: ▲ Usage with Next.js
+description: Install Superkey in a Next.js project.
+---
+
+### 1. Create a new Next.js project:
+
+```bash {1}
+npx create-next-app@latest --ts
+cd your-project
+```
+🎉 Superkey is also compatible with [app directory](https://github.com/pheralb/superkey/tree/main/examples/with-next-13-app-directory).
+
+### 2. Install Superkey:
+
+```bash
+npm install superkey @headlessui/react
+```
+
+### 3. Import in \_app.tsx (or \_app.js):
+
+```jsx {3}
+import type { AppProps } from "next/app";
+
+import "superkey/styles.css";
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+```
+
+### 4. Create a component:
+
+```jsx {5-26}
+import { useState } from "react";
+import { Command, CommandInput, CommandList, CommandOption } from "superkey";
+
+export default function CommandPalette() {
+  const [open, setOpen] = useState(false);
+  return (
+    <Command
+      open={open}
+      onClose={() => {
+        setOpen(false);
+      }}
+    >
+      <CommandInput
+        onChange={(e) => {
+          console.log(e.target.value);
+        }}
+      />
+      <CommandList>
+        <CommandOption value="Option 1">
+          <h1>With Nextjs 🚀</h1>
+          <p>Description</p>
+        </CommandOption>
+      </CommandList>
+    </Command>
+  );
+}
+```
+
+### 5. Run your project:
+
+```bash
+npm run dev
+```
+
+🥳 Ready.
