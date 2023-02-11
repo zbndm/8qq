@@ -18,7 +18,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/pheralb/superkey)
 ![GitHub license](https://img.shields.io/github/license/pheralb/superkey)
 
-</div>
+</div> 
 
 ## 👋 Introduction
 
