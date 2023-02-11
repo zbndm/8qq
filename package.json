@@ -1,6 +1,5 @@
 {
   "private": true,
-
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
@@ -21,5 +20,20 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "packageManager": "pnpm@8.30.0"
+  "packageManager": "pnpm@8.30.0",
+
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbndm/8qq.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zbndm/8qq/issues"
+  },
+  "homepage": "https://github.com/zbndm/8qq#readme"
 }
